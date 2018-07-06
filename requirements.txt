@@ -1,1 +1,4 @@
 .
+matplotlib
+-e git+http://github.com/QUVA-Lab/artemis.git@2.1.0
+dataclasses

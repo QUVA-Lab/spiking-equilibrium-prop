@@ -16,7 +16,7 @@ def demo_create_signal_figure(
         lambda_schedule = '1/t**.75',
         eps_schedule = '1/t**.4',
         n_samples = 200,
-        seed = 1242,
+        seed = 1247,
         input_convergence_speed=3,
         scale = 0.3,
         ):
@@ -36,7 +36,7 @@ def demo_create_signal_figure(
     inputs = [qt.dot(w) for qt in q]
     sig, epsilons, lambdaas = unzip([(s, eps, dec.lambda_stepper(inp)[1]) for s, dec, eps_func in [[0, decoder, eps_stepper]] for inp in inputs for dec, decoded_input in [dec(inp)] for eps_func, eps in [eps_func(decoded_input)] for s in [np.clip((1-eps)*s + eps*decoded_input, 0, 1)]])
 
-    fig=plt.figure(figsize=(3, 4))
+    fig=plt.figure(figsize=(3, 4.5))
     set_figure_border_size(0.02, bottom=0.1)
 
     with vstack_plots(spacing=0.1, xlabel='t', bottom_pad=0.1):
@@ -69,7 +69,7 @@ def demo_create_signal_figure(
         ax = add_subplot()
         ax.plot(true_z, label='$s_j$ (real)', color='r')
         ax.plot(sig, label='$s_j$ (binary)', color='k')
-        ax.legend(loc='best')
+        ax.legend(loc='lower right')
         ax.tick_params(axis='y', labelleft='off')
         ax.axhline(0, color='k')
 

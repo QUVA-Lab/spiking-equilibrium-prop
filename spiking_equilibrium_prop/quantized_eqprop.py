@@ -217,6 +217,7 @@ class EncodingDecodingNeuronLayer(IDynamicLayer):
 
         encoder, output = self.encoder(post_potential)
 
+        print(np.unique(output))
         return EncodingDecodingNeuronLayer(
             potential=potential,
             params=self.params,

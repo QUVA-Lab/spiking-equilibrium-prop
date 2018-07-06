@@ -47,11 +47,12 @@ def compare(records: Sequence[ExperimentRecord], show_now = True):
             ax.plot(result[:, 'epoch'], result[:, subset], label=dict_to_str(ad).replace('lambdas', '$\lambda$').replace('epsilon', '$\epsilon$'), linestyle='--' if is_train else '-', alpha=0.7 if is_train else 1, color=c)
             ax.grid()
             ax.legend()
-            ax.set_ybound(0, max(12.5, min(result[:, subset])*1.5))
+            ax.set_ybound(0, max(10, min(result[:, subset])*1.5))
             # ax.set_ylabel(f'{# "Train" if is_train else "Test"} % Error')
 
     ax.set_xlabel('Epoch')
     ax.set_ylabel('Classification Error')
+    ax.grid()
     # plt.legend([f'{alg}{subset}' for alg in ['Real Eq-Prop', f'Bin Eq-Prop $\lambda$={records[-1].get_args()["lambdas"]}'] for subset in ['Train', 'Test']])
     # plt.ion()
     if show_now:
