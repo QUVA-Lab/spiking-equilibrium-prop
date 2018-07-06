@@ -7,7 +7,7 @@ This is the code implementing
 by Peter O'Connor, Efstratios Gavves, Max Welling
 
 
-## Setup Instructions (We use Python 3.6):
+## Setup Instructions (Requires Python 3.6):
 
 ```
 git clone https://github.com/QUVA-Lab/spiking-equilibrium-prop.git
