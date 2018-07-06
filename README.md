@@ -3,7 +3,7 @@
 
 This is the code implementing 
 
-[Training a Network of Spiking Neurons with Equilibrium Propagation](https://openreview.net/forum?id=HygpgV2-bX)
+[Training a Network of Spiking Neurons with Equilibrium Propagation](https://openreview.net/forum?id=HygpgV2-bX);
 Peter O'Connor, Efstratios Gavves, Max Welling
 
 
