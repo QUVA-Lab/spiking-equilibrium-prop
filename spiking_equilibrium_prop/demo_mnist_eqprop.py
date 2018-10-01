@@ -100,6 +100,7 @@ def experiment_mnist_eqprop(
     Differences between our code and theirs:
     - We do not keep persistent layer activations tied to data points over epochs.  So our results should only really match for the first epoch.
     - We evaluate training score periodically, rather than online average (however you can see online score by setting online_checkpoints_period to something that is not None)
+    - When splitstream=True, we compare the positive-phase state to the state that the negative phase would have gone to had it continued.
     """
 
     print('Params:\n' + '\n'.join(list(f'  {k} = {v}' for k, v in locals().items())))
