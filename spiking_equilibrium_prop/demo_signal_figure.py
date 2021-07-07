@@ -45,7 +45,7 @@ def demo_create_signal_figure(
 
         sep = np.max(x)*1.1
         plot_stacked_signals(x, sep=sep, labels=False)
-        plt.gca().set_color_cycle(None)
+        plt.gca().set_prop_cycle(None)
 
         event_raster_plot(events = [np.nonzero(q[:, i])[0] for i in range(len(w))], sep=sep, s=100)
         ax.legend(labels=[f'$s_{i}$' for i in range(1, len(w)+1)], loc='lower left')

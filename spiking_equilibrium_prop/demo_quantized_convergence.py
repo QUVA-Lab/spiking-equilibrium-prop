@@ -132,7 +132,7 @@ def demo_quantized_convergence(
 
     def run_update(layer_constructor, mode):
 
-        plt.gca().set_color_cycle(None)
+        plt.gca().set_prop_cycle(None)
 
         states = initialize_states(
             layer_constructor=layer_constructor,
